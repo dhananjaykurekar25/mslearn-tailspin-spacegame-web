@@ -54,7 +54,7 @@ steps:
 
 - task: DotNetCoreCLI@2
   displayName: 'Run Unit Test - $(buildConfiguration)'
-  input:
+  inputs:
     command: 'test'
     arguments: '--no-build --configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverageOutputFormat=cobertura /p:CoverageOutput=./TestResults/Coverage'
     publishTestResults: true
