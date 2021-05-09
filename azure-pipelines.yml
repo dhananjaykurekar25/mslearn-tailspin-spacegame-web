@@ -70,8 +70,8 @@ steps:
 - task: PublishCodeCoverageResults@1
   displayName: 'Publish code coverage reports'
   inputs:
-    codeCoverageTool: 'corbertura'
-    summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.corbertura.xml'
+    codeCoverageTool: 'cobertura'
+    summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.cobertura.xml'
 
 - task: DotNetCoreCLI@2
   displayName: 'Publish the project - $(buildConfiguration)'
